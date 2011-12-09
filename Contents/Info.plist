@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDisplayName</key>
+	<string>Bash</string>
+	<key>CFBundleExecutable</key>
+	<string>Bash</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Bash sugar for Espresso v2.0</string>
+	<key>CFBundleIdentifier</key>
+	<string>dk.tixz.sugars.bash</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Bash</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>0.0</string>
+	<key>LSHasLocalizedDisplayName</key>
+	<false/>
+	<key>NSAppleScriptEnabled</key>
+	<false/>
+	<key>NSHumanReadableCopyright</key>
+	<string>(c) 2011 Emil Melgaard. Originally developed by Martin Kühl, 2009. Released under the MIT license.</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>Bash</string>
+</dict>
+</plist>
