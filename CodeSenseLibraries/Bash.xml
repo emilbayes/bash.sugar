@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codesense version="1.0">
+	
+	<!--
+	Documentation for this is here:
+	
+	http://wiki.macrabbit.com/index/CodeSense/#libraries
+	-->
+	<set name="dk.tixz.bash.keywords">
+		<completion string="function">
+			<behavior>
+				<append-dynamic>
+					<!--
+					This says to capture something into group #1 if:
+					- optional whitespace followed by a parenthesis exists after the cursor
+					- required whitespace followed by alphanumeric characters follow the cursor
+					And otherwise to trigger if either of these follow the cursor:
+					- Anything other than optional whitespace plus a non-alphanumeric character
+					- Anything other than whitespace or an opening parenthesis
+					-->
+					<matched-suffix>(\s*\(|\s+[a-zA-Z_$])|\s*[^(a-zA-Z_$]|[^\s(]</matched-suffix>
+					<!--
+					This says: "If something exists in capture group #1, then insert no snippet (just completes the word "function"); otherwise, insert the following snippet which ultimately results in this (after completing "function"):
+					
+					function ${1:name)($2) {$3}
+					-->
+					<transform-into>(${1:name}($2\) {$3})</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+	</set>
+</codesense>

@@ -1,6 +1,6 @@
 # Bash.sugar
 
-A sugar adding sweet [Bash][] support to [Espresso 2.0][].
+A sugar adding sweet [Bash][bash] support to [Espresso 2.0][espresso].
 
 [espresso]: <http://macrabbit.com/espresso/> "Espresso, by MacRabbit"
 [bash]: <http://www.gnu.org/software/bash/> "Bash – GNU Project"
