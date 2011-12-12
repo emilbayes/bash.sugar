@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!--<?xml version="1.0" encoding="UTF-8"?>
 <action-recipes>
-<!--Metadata-->
+<!--Metadata--*>
     <action id="org.purl.net.mkhl.bash.snippets.shebang" category="hidden">
         <title>#!…</title>
         <text-trigger>#!</text-trigger>
@@ -16,7 +16,7 @@
             <syntax-context>bash, bash > comment</syntax-context>
         </setup>
     </action>
-<!--Functions-->
+<!--Functions--*>
     <action id="org.purl.net.mkhl.bash.snippets.function" category="actions.text.bash/bash.tools.Snippets.func">
         <title>New Function</title>
         <text-trigger>fun</text-trigger>
@@ -34,7 +34,7 @@
             <syntax-context>bash, bash *:not(comment, string, heredoc, variable, container.expression)</syntax-context>
         </setup>
     </action>
-<!--Conditionals-->
+<!--Conditionals--*>
     <action id="org.purl.net.mkhl.bash.snippets.if-block" category="actions.text.bash/bash.tools.Snippets.cond">
         <title>if … then</title>
         <text-trigger>if</text-trigger>
@@ -102,7 +102,7 @@ esac]]></string>
             <syntax-context>bash, bash *:not(comment, string, heredoc, variable, container.expression)</syntax-context>
         </setup>
     </action>
-<!--Loops-->
+<!--Loops--*>
     <action id="org.purl.net.mkhl.bash.snippets.for-loop" category="actions.text.bash/bash.tools.Snippets.loop">
         <title>for … do</title>
         <text-trigger>for</text-trigger>
@@ -171,7 +171,7 @@ done]]></string>
             <syntax-context>bash, bash *:not(comment, string, heredoc, variable, container.expression)</syntax-context>
         </setup>
     </action>
-<!--Misc-->
+<!--Misc--*>
     <action id="org.purl.net.mkhl.bash.snippets.here-doc" category="actions.text.bash/bash.tools.Snippets.misc">
         <title>Here-Document</title>
         <text-trigger>&lt;&lt;</text-trigger>
@@ -189,4 +189,4 @@ ${1/['"`](.+)['"`]/$1/}]]></string>
             <syntax-context>bash, bash *:not(comment, string, heredoc, variable, container.expression)</syntax-context>
         </setup>
     </action>
-</action-recipes>
+</action-recipes>-->

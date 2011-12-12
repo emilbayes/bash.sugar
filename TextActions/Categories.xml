@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!--<?xml version="1.0" encoding="UTF-8"?>
 <action-categories>
     <category id="actions.text.bash" show="sub">
         <title>Bash</title>
@@ -8,4 +8,4 @@
     <category id="bash.tools.Snippets.cond" show="inline separated"/>
     <category id="bash.tools.Snippets.loop" show="inline separated"/>
     <category id="bash.tools.Snippets.misc" show="inline separated"/>
-</action-categories>
+</action-categories>-->

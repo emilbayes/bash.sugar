@@ -24,7 +24,18 @@
 					
 					function ${1:name)($2) {$3}
 					-->
-					<transform-into>(${1:name}($2\) {$3})</transform-into>
+					<transform-into>(?1:: ${1:name}\($2\) {$0})</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+	</set>
+	
+	<set name="dk.tixz.bash.snippets">
+		<completion string="#!">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\s*)|$</matched-suffix>
+					<transform-into>/bin/${1:sh}/ $0</transform-into>
 				</append-dynamic>
 			</behavior>
 		</completion>

@@ -8,4 +8,10 @@
 		<complete-match>\b[a-zA-Z]*</complete-match>
 	</provider>
 	
+	<provider>
+		<selector>bash, bash *:not(string,string *,comment,regex,regex *)</selector>
+		<completions>dk.tixz.bash.snippets</completions>
+		<complete-match>\s*</complete-match>
+	</provider>
+	
 </codesense>
