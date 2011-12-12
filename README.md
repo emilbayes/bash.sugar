@@ -1,7 +1,7 @@
 Very early alpha
 ================
-Only code highlighting is in place
-----------------------------------
+**Only code highlighting is in place**
+
 
 
 # Bash.sugar
