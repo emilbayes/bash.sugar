@@ -1,3 +1,9 @@
+Very early alpha
+================
+Only code highlighting is in place
+----------------------------------
+
+
 # Bash.sugar
 
 A sugar adding sweet [Bash][bash] support to [Espresso 2.0][espresso].
