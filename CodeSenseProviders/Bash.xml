@@ -3,15 +3,16 @@
 	
 	<!-- Non-control keywords -->
 	<provider>
-		<selector>bash, bash *:not(string,string *,comment,regex,regex *)</selector>
+		<selector>bash, bash *:not(comment, string, heredoc, variable, container.expression)</selector>
 		<completions>dk.tixz.bash.keywords</completions>
 		<complete-match>\b[a-zA-Z]*</complete-match>
 	</provider>
 	
 	<provider>
-		<selector>bash, bash *:not(string,string *,comment,regex,regex *)</selector>
+		<selector>bash, bash *:not(comment, string, heredoc, variable, container.expression)</selector>
 		<completions>dk.tixz.bash.snippets</completions>
 		<complete-match>\s*</complete-match>
 	</provider>
+	
 	
 </codesense>

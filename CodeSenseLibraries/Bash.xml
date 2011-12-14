@@ -39,5 +39,14 @@
 				</append-dynamic>
 			</behavior>
 		</completion>
+		
+		<completion string="&lt;&lt;">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\s*)|$</matched-suffix>
+					<transform-into>${1:TOKEN}\n$0\n$1</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
 	</set>
 </codesense>
