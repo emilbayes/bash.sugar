@@ -24,29 +24,85 @@
 					
 					function ${1:name)($2) {$3}
 					-->
-					<transform-into>(?1:: ${1:name}\($2\) {$0})</transform-into>
+					<transform-into>(?1:: ${1:name}\($2\) {\n\t${0:#Statements}\n})</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="if">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\s*\[\[|\s+[a-zA-Z_$])|\s*[^\[a-zA-Z_$]|[^\s\[]</matched-suffix>
+					<transform-into>(?1:: ${2:[[  ${1:condition}  ]]}; then\n\t${0:#statements}\nfi\n)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="elif">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\s*\[\[|\s+[a-zA-Z_$])|\s*[^\[a-zA-Z_$]|[^\s\[]</matched-suffix>
+					<transform-into>(?1:: ${2:[[  ${1:condition}  ]]}; then\n\t${0:#statements}\n)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="else">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\s*)|$</matched-suffix>
+					<transform-into>\n${0:#statements}\n</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="case">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>\s*"|\s+[a-zA-Z_$]|\s*[^a-zA-Z_$]|^\s"</matched-suffix>
+					<transform-into>(?1:: ${1:word} in\n\t${2:pattern} \)\t${0:#statements}\n\t;;\nesac\n)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+	<completion string="for">
+		<behavior>
+			<append-dynamic>
+				<matched-suffix>(\s*\(\(|\s+[a-zA-Z_$])|\s*[^((a-zA-Z_$]|[^\s((]</matched-suffix>
+				<transform-into><![CDATA[(?1:: ${1:\(\( i = 0; i < ${2:10}; i++ \)\)}; do\n\t${0:#statements}\ndone\n)]]></transform-into>
+			</append-dynamic>
+		</behavior>
+	</completion>
+		<completion string="while">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\s*\[\[|\s+[a-zA-Z_$])|\s*[^\[a-zA-Z_$]|[^\s\[]</matched-suffix>
+					<transform-into>(?1:: ${2:[[  ${1:condition}  ]]}; do\n\t${0:#statements}\ndone\n)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="until">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\s*\[\[|\s+[a-zA-Z_$])|\s*[^\[a-zA-Z_$]|[^\s\[]</matched-suffix>
+					<transform-into>(?1:: ${2:[[  ${1:condition}  ]]}; do\n\t${0:#statements}\ndone\n)</transform-into>
 				</append-dynamic>
 			</behavior>
 		</completion>
 	</set>
 	
-	<set name="dk.tixz.bash.snippets">
-		<completion string="#!">
-			<behavior>
-				<append-dynamic>
-					<matched-suffix>(\s*)|$</matched-suffix>
-					<transform-into>/bin/${1:sh}/ $0</transform-into>
-				</append-dynamic>
-			</behavior>
-		</completion>
-		
-		<completion string="&lt;&lt;">
-			<behavior>
-				<append-dynamic>
-					<matched-suffix>(\s*)|$</matched-suffix>
-					<transform-into>${1:TOKEN}\n$0\n$1</transform-into>
-				</append-dynamic>
-			</behavior>
-		</completion>
-	</set>
+	<set name="dk.tixz.bash.keywords.utils">
+			<completion string="#!">
+				<behavior>
+					<append-dynamic>
+						<matched-suffix>(\s*)|$</matched-suffix>
+						<transform-into>/bin/${1:sh}/ $0</transform-into>
+					</append-dynamic>
+				</behavior>
+			</completion>
+	
+			<completion string="&lt;&lt;">
+				<behavior>
+					<append-dynamic>
+						<matched-suffix>(\s*)|$</matched-suffix>
+						<transform-into>${1:TOKEN}\n$0\n$1</transform-into>
+					</append-dynamic>
+				</behavior>
+			</completion>
+		</set>
 </codesense>
