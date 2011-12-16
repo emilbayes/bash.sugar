@@ -6,13 +6,13 @@
 	<provider>
 		<selector>bash, bash *:not(comment, string, string *, regex, regex *, heredoc, variable, container.expression)</selector>
 		<completions>dk.tixz.bash.keywords</completions>
-		<complete-match>\b[a-zA-Z]*</complete-match>
+		<complete-match>[a-zA-Z]*</complete-match>
 	</provider>
 	
 	<provider>
-		<selector>bash, bash *:not(comment, string, string *, regex, regex *, heredoc, variable, container.expression)</selector>
+		<selector>bash, bash *:not(string, string *, regex, regex *, variable, container.expression)</selector>
 		<completions>dk.tixz.bash.keywords.utils</completions>
-		<complete-match>\s*</complete-match>
+		<complete-match>[#!&lt;]*</complete-match>
 	</provider>
 	
 </codesense>
