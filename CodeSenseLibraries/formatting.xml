@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codesense version="1.0">
+	
+	<!-- <set> or <behavior> elements here -->
+	<set name="dk.tixz.bash.formatting">
+		<completion string="$(tput rev)"/>
+		<completion string="$(tput sgr0)"/>
+		<completion string="$(tput setaf">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\s*\d|\s+\d)|\s*[\d]|[^\d]</matched-suffix>
+					<transform-into> ${0:2}\)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+	</set>
+</codesense>
