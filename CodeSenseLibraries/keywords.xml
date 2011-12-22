@@ -60,6 +60,14 @@
 				</append-dynamic>
 			</behavior>
 		</completion>
+		<completion string="select">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>\s*"|\s+[a-zA-Z_$]|\s*[^a-zA-Z_$]|^\s"</matched-suffix>
+					<transform-into>(?1:: ${1:name} in ${2:words}; do\n\t${0:#statements}\n\tbreak;\ndone\n)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
 	<completion string="for">
 		<behavior>
 			<append-dynamic>

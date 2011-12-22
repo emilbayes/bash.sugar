@@ -274,7 +274,7 @@
         </collection>
         <collection name="keyword">
             <zone name="keyword.control">
-                <expression>\b(?:if|then|else|elif|fi|for|in|do|done|select|case|continue|esac|while|until|return)\b</expression>
+                <expression>\b(?:if|then|else|elif|fi|for|in|do|done|select|case|continue|break|esac|while|until|return)\b</expression>
             </zone>
             <zone name="keyword.modifier">
                 <expression>\b(?:export|declare|typeset|local|readonly)\b</expression>

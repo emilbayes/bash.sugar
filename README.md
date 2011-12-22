@@ -29,6 +29,7 @@ CodeSense includes:
 	elif … then
 	else … then
 	case … in
+	select … in … do
 	for … do
 	while … do
 	until … do
