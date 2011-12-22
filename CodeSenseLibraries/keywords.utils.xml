@@ -18,5 +18,14 @@
 					</append-dynamic>
 				</behavior>
 			</completion>
+			
+			<completion string="@&quot;">
+				<behavior>
+					<append-dynamic>
+						<matched-suffix>(\s*)|$</matched-suffix>
+						<transform-into>\n$0\r"@</transform-into>
+					</append-dynamic>
+				</behavior>
+			</completion>
 		</set>
 </codesense>

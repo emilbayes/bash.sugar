@@ -16,7 +16,7 @@
 	</provider>
 	
 	<provider>
-		<selector>bash string, bash heredoc, bash string *, bash heredoc *</selector>
+		<selector>bash string, bash heredoc, bash herestring, bash string *, bash heredoc *, bash herestring *</selector>
 		<completions>dk.tixz.bash.formatting</completions>
 		<complete-match>[\$\(a-zA-Z]*</complete-match>
 	</provider>
