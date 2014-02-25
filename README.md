@@ -13,7 +13,7 @@ Rename the folder to Bash.sugar and double click. Restart Espresso and you're go
 Another option is Terminal:
 
 	cd ~/Library/Application\ Support/Espresso/Sugars/
-	git clone git://github.com/tixz/Bash.sugar.git
+	git clone git://github.com/tixz/Bash.sugar
 
 ## Usage
 
